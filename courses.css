@@ -31,3 +31,15 @@ a{text-decoration:none;color:inherit}.contactDesign1{height:100vh;display:flex;b
 button{
     cursor: pointer;
 }
+.smallhigh33{
+    color: var(--softgrey);
+    text-shadow: 0 0 1px var(--mintgreen);
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 100%;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .smallhigh33:hover{
+    color: var(--exposegreen);
+  }
