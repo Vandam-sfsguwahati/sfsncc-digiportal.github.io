@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Stencil;
+    font-family: "Pixelify Sans", sans-serif;
     font: bold;
     scroll-behavior: smooth;
 }
@@ -35,6 +36,7 @@ header {
     background-color: var(--text-color);
     padding-bottom: 10px;
     position: absolute;
+    
 }
 header ul {
     display: flex;
@@ -47,7 +49,7 @@ header ul li {
     margin-left: 20px;
     cursor: pointer;
     transition: 0.3s ease;
-    font-size: 100%;
+    font-size: 140%;
 }
 header ul li a {
     text-decoration: none;
@@ -64,7 +66,7 @@ header .Logo {
     color: white;
     font-weight: 700;
     text-decoration: none;
-    font-size: 110%;
+    font-size: 125%;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -175,13 +177,13 @@ ul {
 }
 
 .footer-col h4 {
-    font-size: 2rem;
+    font-size: 170%;
     color: #fff;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
     position: relative;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .footer-col h4::before {
@@ -200,7 +202,7 @@ ul {
 }
 
 .footer-col ul li a {
-    font-size: 16px;
+    font-size: 160%;
     text-transform: capitalize;
     color: #fff;
     text-decoration: none;
@@ -217,7 +219,7 @@ ul {
     
 }
 
-.footer-col.social-links {
+.footer-col.social-links{
     display: flex;
     height: 40px;
     width: 40px;
@@ -228,11 +230,13 @@ ul {
     border-radius: 50%;
     color: #fff;
     transition: all 0.5s ease;
+    font-size: 1.5rem;
 }
 
 .footer-col.social-links a:hover {
     color: #24262b;
     background-color: #fff;
+    transform: scale(1.1);
 }
 
 /*responsive*/
@@ -253,23 +257,23 @@ ul {
 
 .copy {
     color: white;
-    font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 165%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
 }
 .float {
     text-decoration: none;
     color: rgb(255, 255, 255);
     position: fixed;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     bottom: 40px;
     right: 40px;
     background-color: rgb(0, 0, 0);
     color: #25D366;
-    border-radius: 50px;
+    border-radius: 60px;
     text-align: center;
     box-shadow: 2px 2px 3px #999;
-    font-size: xx-large;
+    font-size: 3.5rem;
     padding-top: 15px;
 
 }
@@ -281,9 +285,289 @@ ul {
     font-size: medium;
 }
 .contactusdiv{
-    padding-left: 35px;
-    padding-top: 25px;
+    padding-left: 13rem;
+    padding-top: 35px;
+    width: 63rem;
 }
 .contactusheading{
+    color: white;
+}
+.textcontact{
+    color: white;
+    font-size: 135%;
+    font-family: georgia;
+    font: bolder;
+}
+.contactusdiv input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 4rem;
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid white;
+    line-height: 6vh;
+    color: white;
+    font-size: 1.9rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contactusdiv input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 4rem;
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid white;
+    line-height: 6vh;
+    color: white;
+    font-size: 1.9rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.socialtext1{
+    font-size: 16px;
+    color: white;
+    font-family: 'Courier New', Courier, 'monospace';
+}
+.containernews {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.news-article {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-article h2 {
+    margin-top: 0;
+}
+
+.news-article p {
+    line-height: 1.6;
+}
+
+.news-article a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.news-article a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 20px 0;
+}
+.leftpanelcontainer{
+    display: block;
+    margin-left: 32px;
+}
+.ccline{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: white;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 130%;
+    border-radius: 35px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.dropdown-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 110%;
+    border-right: 30px solid #000000;
+    cursor: pointer;
+}
+
+.dropdown-button:hover {
+    background-color: #ffffff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0px; /* Reset any default margin */
+}
+
+.dropdown-content a + a {
+    border-top: 1px solid #ddd; /* Add a border between items */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 100%;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #fff;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.dropdown-button2:hover,
+.dropdown-button2.active{
+    background-color: white;
+    border-radius: 35px;
+    color: black;
+}
+.aboutdiv2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 50px;
+    margin-left:35%;
+    font-size: 135%;
+    font: bold;
+    border-left: 1px solid black;
+}
+.btn2{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: white;
+    background: red;
+    cursor: pointer;
+    font-size: 140%;
+    transition: 0.3s ease;
+    font: bold;
+    font-weight: 900;
+    transition: 0.3s;
+    margin-top: 38px;
+    position: relative;
+    display: inline-block;
+}
+.btn2:hover {
+    background-color: white;
+    border-radius: 35px;
+    transition: 0.5s;
+    color: black;
+}
+.opensource a{
+    padding: 7px 7px 7px 7px;
+    border-radius: 3px;
+    font: bold;
+    font-weight: 300;
+    text-decoration: none;
+    position: absolute;
+    left: 20px;
+    top: 110px;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+.button-icon {
+  display: flex;
+  border: 3px #fff solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.icon {
+  background-color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: #ff98a2;
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 47px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: #ff98a2;
+  color: #fff;
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
+}
+.yolo{
+    font-family: "Pixelify Sans", sans-serif;
+    text-decoration: none;
     color: white;
 }
