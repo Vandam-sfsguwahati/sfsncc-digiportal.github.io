@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: bold;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--black);
+    user-select: auto;
+    width: device-width;
+    padding-top: 6.7rem;
+}
+
+:root {
+    --black: #000000;
+    --white: #fff;
+    --red: #ff0000;
+    --darkblue: #0c0077;
+    --lightblue: #0062d1;
+}
+table {
+    border-collapse: collapse;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-family: monospace;
+    font-size: large;
+  }
+  pre {
+    font-family: monospace; /* Ensures a monospaced font for proper alignment */
+    white-space: pre-wrap; /* Allows text to wrap, but still preserves whitespace */
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    color: white;
+    font-size: 150%;
+}

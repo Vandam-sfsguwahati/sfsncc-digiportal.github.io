@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATIONAL CADET CORPS | SFSN</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="icon" href="image.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        #search-container {
+            margin: 20px;
+            /*margin-left: 50%;*/
+        }
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #table {
+            white-space: pre;
+            font-family: monospace;
+            margin: 20px;
+            font-size: 130%;
+        }
+        #filtered-table {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search for names or other data...">
+    </div>
+</center>
+    <center><pre id="filtered-table"><br></pre></center>
+    <center><pre id="table">
+        
++-------+------------------------------+--------+---------------+------------+-----------+-------+-------+-------+
+| sl_no | name                         | reg_no | rgtl_no       | ph_no      | enrl_stat | email | class | sec   |
++-------+------------------------------+--------+---------------+------------+-----------+-------+-------+-------+
+|     1 | Vizo Visa                    |   3753 | NULL          | 7578048511 | Y/N/P     | NULL  |     7 | A     |
+|     2 | Jayaditya                    |   3630 | NULL          | 9864269458 | Y/N/P     | NULL  |     7 | A     |
+|     3 | Arnab Jyoti Parasar          |   3568 | NULL          | 8723899474 | Y/N/P     | NULL  |     7 | A     |
+|     4 | Supratim Biswas              |   3557 | NULL          | 9435341382 | Y/N/P     | NULL  |     7 | A     |
+|     5 | Kritartha Lakra              |   3642 | NULL          | 9954765902 | Y/N/P     | NULL  |     7 | A     |
+|     6 | Dhimant Roy                  |   5092 | NULL          | 9954243052 | Y/N/P     | NULL  |     7 | A     |
+|     7 | Tanvi Lahon                  |   5121 | NULL          | 7578030553 | Y/N/P     | NULL  |     7 | A     |
+|     8 | Nikita Sharma                |   3561 | NULL          | 8761045499 | Y/N/P     | NULL  |     7 | A     |
+|     9 | Disha Munda                  |   3513 | NULL          | 6001892928 | Y/N/P     | NULL  |     7 | A     |
+|    10 | Bhagyashree Boro             |   3515 | NULL          | 881058368  | Y/N/P     | NULL  |     7 | A     |
+|    11 | Yashika Pradhan              |   3662 | NULL          | 7002694227 | Y/N/P     | NULL  |     7 | A     |
+|    12 | Bhaswati Bangjang            |   3659 | NULL          | 9707091707 | Y/N/P     | NULL  |     7 | A     |
+|    13 | Kristi Talukdar              |   3663 | NULL          | 9859531414 | Y/N/P     | NULL  |     7 | A     |
+|    14 | Ishmita Das                  |   3516 | NULL          | 9954126616 | Y/N/P     | NULL  |     7 | A     |
+|    15 | Ahen Sana Singha             |   3658 | NULL          | 9435652930 | Y/N/P     | NULL  |     7 | A     |
+|    16 | Dishan Deori                 |   5094 | NULL          | 9054372077 | Y/N/P     | NULL  |     7 | A     |
+|    17 | Wangdan Tamang               |   5146 | NULL          | 9957708402 | Y/N/P     | NULL  |     7 | B     |
+|    18 | Gunvansh Mayur Dutta         |   3567 | NULL          | 9678138247 | Y/N/P     | NULL  |     7 | B     |
+|    19 | Joyshe Borchetia             |   3547 | NULL          | 9395223419 | Y/N/P     | NULL  |     7 | B     |
+|    20 | Aradhya Deori                |   5113 | NULL          | 8812028710 | Y/N/P     | NULL  |     7 | B     |
+|    21 | Debangaraj Baishya           |   1234 | NULL          | 0          | Y/N/P     | NULL  |     7 | B     |
+|    22 | Sragvi Hazarika              |   5133 | NULL          | 9085013139 | Y/N/P     | NULL  |     7 | B     |
+|    23 | Keshari Nandan               |   3633 | NULL          | 9707216785 | Y/N/P     | NULL  |     7 | C     |
+|    24 | Ayaan Ahmed                  |   3676 | NULL          | 8638177293 | Y/N/P     | NULL  |     7 | c     |
+|    25 | Brianna Prachujya Saikia     |   3594 | NULL          | 7896874946 | Y/N/P     | NULL  |     7 | C     |
+|    26 | Md. Wasim Rahman             |   3641 | NULL          | 9085822377 | Y/N/P     | NULL  |     7 | C     |
+|    27 | Mansak Varanao               |   5144 | NULL          | 8240904418 | Y/N/P     | NULL  |     7 | C     |
+|    28 | Pratik Khakhlari             |   3581 | NULL          | 8822983055 | Y/N/P     | NULL  |     7 | C     |
+|    29 | Sadma J Lalung               |   3655 | NULL          | 8133976700 | Y/N/P     | NULL  |     7 | D     |
+|    30 | Himank Baruah                |   3550 | NULL          | 9508748047 | Y/N/P     | NULL  |     7 | D     |
+|    31 | Kaushik Mandal               |   3544 | NULL          | 7002140609 | Y/N/P     | NULL  |     7 | D     |
+|    32 | Shehzad Haque                |   3576 | NULL          | 8134850503 | Y/N/P     | NULL  |     7 | D     |
+|    33 | Aarohan Mohan                |   3394 | NULL          | 9101485081 | Y/N/P     | NULL  |     8 | A     |
+|    34 | Julbika Rizbi                |   3284 | NULL          | 8638320095 | Y/N/P     | NULL  |     8 | A     |
+|    35 | Hreesty Kashyap              |   6419 | NULL          | 7002188459 | Y/N/P     | NULL  |     8 | A     |
+|    36 | Angel Hazarika               |   3377 | NULL          | 8099479429 | Y/N/P     | NULL  |     8 | A     |
+|    37 | Hena Tasmin                  |   3299 | NULL          | 9132837598 | Y/N/P     | NULL  |     8 | B     |
+|    38 | Ruby N. Haokip               |   3278 | NULL          | 7576012395 | Y/N/P     | NULL  |     8 | B     |
+|    39 | Umang Dudheria               |   3254 | NULL          | 8399981267 | Y/N/P     | NULL  |     8 | B     |
+|    40 | Nikhil Lahkar                |   3370 | NULL          | 6900440127 | Y/N/P     | NULL  |     8 | B     |
+|    41 | Prenamika Khaklary           |   3245 | NULL          | 9706760290 | Y/N/P     | NULL  |     8 | B     |
+|    42 | Asin Sahana Ch.              |   3247 | NULL          | 9101292366 | Y/N/P     | NULL  |     8 | B     |
+|    43 | Abhigyan Dutta               |   3323 | NULL          | 9365980175 | Y/N/P     | NULL  |     8 | B     |
+|    44 | Mayur R. Puru                |   3271 | NULL          | 9957404450 | Y/N/P     | NULL  |     8 | B     |
+|    45 | Musarab Hoque                |   3794 | NULL          | 8402043480 | Y/N/P     | NULL  |     8 | B     |
+|    46 | Harshita Lahkar              |      0 | NULL          | 8135813842 | Y/N/P     | NULL  |     8 | B     |
+|    47 | Hiyashree Roy                |   3305 | NULL          | 9101477925 | Y/N/P     | NULL  |     8 | B     |
+|    48 | Manisha Mazumdar             |   3261 | NULL          | 8812938754 | Y/N/P     | NULL  |     8 | C     |
+|    49 | Anandita Das                 |   3319 | NULL          | 7002354824 | Y/N/P     | NULL  |     8 | C     |
+|    50 | Anusaya Duarah               |   3390 | NULL          | 8472912939 | Y/N/P     | NULL  |     8 | C     |
+|    51 | Alok Kumar                   |   3263 | NULL          | 9678286714 | Y/N/P     | NULL  |     8 | C     |
+|    52 | Emon Das                     |   3367 | NULL          | 6900186269 | Y/N/P     | NULL  |     8 | C     |
+|    53 | Bikramjit Medhi              |   3357 | NULL          | 8638713191 | Y/N/P     | NULL  |     8 | C     |
+|    54 | Sumi Krapi                   |   3259 | NULL          | 9706134225 | Y/N/P     | NULL  |     8 | C     |
+|    55 | Abigail Odyuo                |   3314 | NULL          | 7099674683 | Y/N/P     | NULL  |     8 | C     |
+|    56 | Porishmita Modak             |   3347 | NULL          | 8876770321 | Y/N/P     | NULL  |     8 | C     |
+|    57 | Alankrita Devi               |   3349 | NULL          | 7635821784 | Y/N/P     | NULL  |     8 | C     |
+|    58 | Hiyamoni Daimary             |   3076 | NULL          | 7636065862 | Y/N/P     | NULL  |     8 | C     |
+|    59 | Sahana Khatun                |   3382 | NULL          | 7638823064 | Y/N/P     | NULL  |     8 | C     |
+|    60 | Thoudam N. Singh             |   3320 | NULL          | 9387867941 | Y/N/P     | NULL  |     8 | C     |
+|    61 | Jyotishman Sonowal           |   3282 | NULL          | 9957135270 | Y/N/P     | NULL  |     8 | C     |
+|    62 | Yuvraj Baishya               |   3309 | AS22JDA162016 | 9864857452 | Y/N/P     | NULL  |     8 | C     |
+|    63 | Nahid Ahmed Bhuyan           |   3318 | NULL          | 9954114391 | Y/N/P     | NULL  |     8 | C     |
+|    64 | Angel Talukdar               |   3256 | NULL          | 8822034087 | Y/N/P     | NULL  |     8 | C     |
+|    65 | Arnold Borah                 |   3084 | AS23JDA018717 | 9706001322 | Y/N/P     | NULL  |     9 | A     |
+|    66 | Himangshu Dudheria           |   2826 | NULL          | ref. umang | Y/N/P     | NULL  |     9 | A     |
+|    67 | Dhritishman Barman           |   3403 | AS23JDA013870 | 9707979807 | Y/N/P     | NULL  |     9 | A     |
+|    68 | Piyashri Kassyap             |   6330 | NULL          | 9957294909 | Y/N/P     | NULL  |     9 | A     |
+|    69 | Ankush Das                   |   2994 | NULL          | 6003888171 | Y/N/P     | NULL  |     9 | B     |
+|    70 | Anshikha Jha                 |   3009 | AS22JWA102018 | 9864110248 | Y/N/P     | NULL  |     9 | B     |
+|    71 | Anshika Varma                |   3014 | NULL          | 1          | Y/N/P     | NULL  |     9 | B     |
+|    72 | Hanshita Malakar             |   3031 | NULL          | 7429775761 | Y/N/P     | NULL  |     9 | B     |
+|    73 | Bidisha Lalung               |   3048 | NULL          | 9854119773 | Y/N/P     | NULL  |     9 | B     |
+|    74 | Priyanshi Pathak             |   3026 | NULL          | 8822916113 | Y/N/P     | NULL  |     9 | B     |
+|    75 | Ananya Dutta                 |   2964 | NULL          | 9707025567 | Y/N/P     | NULL  |     9 | B     |
+|    76 | Risha Paul                   |   3011 | NULL          | 8638624614 | Y/N/P     | NULL  |     9 | B     |
+|    77 | Samrat B. Bora               |   3176 | NULL          | 9435191764 | Y/N/P     | NULL  |     9 | B     |
+|    78 | Md. Jesin A. Ahmed           |   3057 | NULL          | 9957117496 | Y/N/P     | NULL  |     9 | B     |
+|    79 | Parshiv Borgohain            |   2953 | AS22JDA102009 | 7086017721 | Y/N/P     | NULL  |     9 | B     |
+|    80 | Priya Kumari                 |   3097 | AS23JWA014910 | 7002014720 | Y/N/P     | NULL  |     9 | B     |
+|    81 | Tina Paul                    |   3000 | AS23JWA007369 | 8473955125 | Y/N/P     | NULL  |     9 | B     |
+|    82 | Samrat Das                   |   3333 | AS23JDA001519 | 8638931378 | Y/N/P     | NULL  |     9 | B     |
+|    83 | Anish Deb Goswami            |   2993 | NULL          | 2          | Y/N/P     | NULL  |     9 | C     |
+|    84 | Subhradeep Choudhary         |   3044 | AS22JDA016069 | 6001937972 | Y/N/P     | NULL  |     9 | C     |
+|    85 | Dhimant Boro                 |   3090 | NULL          | 8822884737 | Y/N/P     | NULL  |     9 | C     |
+|    86 | Aaryan Kumar                 |   3169 | AS23JDA180115 | 6901124052 | Y/N/P     | NULL  |     9 | C     |
+|    87 | Anshuman Kalita              |   3061 | AS22JDA102001 | 6001314454 | Y/N/P     | NULL  |     9 | C     |
+|    88 | Priyangshu Dey               |   2723 | NULL          | 6003911799 | Y/N/P     | NULL  |     9 | C     |
+|    89 | Deepika Sharma               |   2974 | NULL          | 8822855106 | Y/N/P     | NULL  |     9 | c     |
+|    90 | Priyanka Thapa               |   3034 | AS23JWA012939 | 6003056154 | Y/N/P     | NULL  |     9 | C     |
+|    91 | Isshamoyee Bharadwaj         |   6282 | NULL          | 6001857384 | Y/N/P     | NULL  |     9 | C     |
+|    92 | Harshita Kashyap             |   2965 | AS23JWA016060 | 9127419325 | Y/N/P     | NULL  |     9 | C     |
+|    93 | Arbaaz Khan Choudhary        |   4049 | AS22JDA102005 | 9101384393 | Y/N/P     | NULL  |     9 | C     |
+|    94 | Christiana Naojemhoi Doungle |   4322 | AS23JWA005694 | 7578914579 | Y/N/P     | NULL  |     9 | C     |
+|    95 | Barsha Sharma                |   3416 | NULL          | 8254907279 | Y/N/P     | NULL  |     9 | C     |
+|    96 | Ipshita Kalita               |   2982 | NULL          | 8486112990 | Y/N/P     | NULL  |     9 | D     |
+|    97 | Dipika Das                   |   3051 | NULL          | 8638994930 | Y/N/P     | NULL  |     9 | D     |
+|    98 | Neelakash Mahanta            |   2990 | NULL          | 8453091401 | Y/N/P     | NULL  |     9 | D     |
+|    99 | Banani Talukdar              |   2983 | AS23JWA014911 | 9127223950 | Y/N/P     | NULL  |     9 | D     |
+|   100 | Ankita Pradhan               |   3030 | AS23JWA007314 | 9707214796 | Y/N/P     | NULL  |     9 | D     |
+|   101 | Rohit K. Singh               |   6535 | NULL          | 8135000491 | Y/N/P     | NULL  |     9 | D     |
+|   102 | Arihant Singha               |   3039 | NULL          | 8638612368 | Y/N/P     | NULL  |     9 | D     |
+|   103 | Adityaraj Kakati             |   3036 | NULL          | 9365459344 | Y/N/P     | NULL  |     9 | D     |
+|   104 | Taniya Deb                   |   3079 | NULL          | 9101499344 | Y/N/P     | NULL  |     9 | D     |
+|   105 | Nishika Sharma               |   3052 | AS23JWA010696 | 9394067309 | Y/N/P     | NULL  |     9 | D     |
+|   106 | Tabassum Tanzil              |   3070 | NULL          | 9957692439 | Y/N/P     | NULL  |     9 | D     |
+|   107 | Priyakshi Dutta              |   3163 | AS22JWA102027 | 8876890147 | Y/N/P     | NULL  |     9 | D     |
+|   108 | Henry M Haokip               |   3082 | AS22JDA102025 | 9957647073 | Y/N/P     | NULL  |     9 | D     |
+|   109 | Anuj Purbey                  |   2762 | NULL          | 8638597224 | Y/N/P     | NULL  |    10 | A     |
+|   110 | Abhijit Thapa                |   2717 | AS22JDA102033 | 8812002970 | Y/N/P     | NULL  |    10 | A     |
+|   111 | Rajveer Sinha                |   2635 | AS22JDA102006 | 6900532400 | Y/N/P     | NULL  |    10 | A     |
+|   112 | Sara Liza Kindo              |   2819 | NULL          | 7099015915 | Y/N/P     | NULL  |    10 | A     |
+|   113 | Samprity Das                 |   2785 | AS22JWA10204  | 9395724227 | Y/N/P     | NULL  |    10 | A     |
+|   114 | Ritom Kalita                 |   2796 | AS22JDA102007 | 9678011307 | Y/N/P     | NULL  |    10 | A     |
+|   115 | Suravi Sharma                |   3959 | NULL          | 8876827319 | Y/N/P     | NULL  |    10 | A     |
+|   116 | Kunal Chhetry                |   2847 | AS22JDA102024 | 7002682246 | Y/N/P     | NULL  |    10 | A     |
+|   117 | Rainee Phukan                |   5069 | AS23JWA005790 | 9707934938 | Y/N/P     | NULL  |    10 | A     |
+|   118 | Muskan Kumari Prasad         |   3138 | AS22JWA102023 | 6001448687 | Y/N/P     | NULL  |    10 | A     |
+|   119 | Bidisha Sharma               |   2818 | AS23JWA014912 | 8011103050 | Y/N/P     | NULL  |    10 | C     |
+|   120 | Nilakshi Singh               |   2759 | AS22JWA102014 | 7002623909 | Y/N/P     | NULL  |    10 | C     |
+|   121 | Sahid Hussain                |   2778 | AS22JDA102028 | 9957962257 | Y/N/P     | NULL  |    10 | C     |
+|   122 | Animesh Baishya              |   2790 | 8638756716    | 8638756716 | Y/N/P     | NULL  |    10 | C     |
+|   123 | Mugdha Rajguru               |   2855 | AS22JWA102024 | 8753921229 | Y/N/P     | NULL  |    10 | C     |
+|   124 | M Vandam Singha              |   3125 | AS21JDA101006 | 8822675694 | Y/N/P     | NULL  |    10 | C     |
+|   125 | Lamjingbi Chanu              |   6504 | NULL          | 9233461504 | Y/N/P     | NULL  |    11 | HUM B |
+|   126 | Naureen Eeshra               |   6428 | NULL          | 8638558283 | Y/N/P     | NULL  |    11 | HUM B |
+|   127 | Dhiraj Das                   |   2565 | NULL          | 9864298598 | Y/N/P     | NULL  |    11 | HUM B |
+|   128 | Niharika Shrivastava         |   5266 | NULL          | 8638181038 | Y/N/P     | NULL  |    11 | HUM B |
+|   129 | Jun Tamuli                   |   9999 | NULL          | 6003752918 | Y/N/P     | NULL  |    12 | HUM   |
++-------+------------------------------+--------+---------------+------------+-----------+-------+-------+-------+
+        <!-- Your table content goes here -->
+    </pre>
+</center>
+
+    <script>
+        document.getElementById('search-input').addEventListener('input', function () {
+            let searchText = this.value.toLowerCase();
+            let table = document.getElementById('table').innerText;
+            let lines = table.split('\n');
+            let filteredLines = lines.filter(line => line.toLowerCase().includes(searchText));
+            document.getElementById('filtered-table').innerText = filteredLines.join('\n');
+            document.getElementById('filtered-table').style.display = filteredLines.length > 0 ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

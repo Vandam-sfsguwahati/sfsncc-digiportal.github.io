@@ -571,3 +571,17 @@ main {
     text-decoration: none;
     color: white;
 }
+.pledge{
+    background-color: white;
+    margin-right: 38px;
+    margin-left: 38px;
+    margin-bottom: 6rem;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.aim{
+    background-color: white;
+    margin-right: 38px;
+    margin-left: 38px;
+    margin-bottom: 6rem;
+}
