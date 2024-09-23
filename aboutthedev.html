@@ -19,6 +19,13 @@
 </head>
 
 <body>
+      <!-- Preloader -->
+      <div id="preloader">
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        <p class="smallhighend">BOOTING INTO VANDAM LTS...</p>
+    </div>
   <!--HEADER--> <!--SECTION0-->
 
   <section class="Header" id="Header">
@@ -248,5 +255,23 @@
   <footer>
     <center><span class="smallhigh33">© Vandam Meisnam 2024 <br>Designed & Developed by Vandam Singha. All Rights Reserved</span></center>
   </footer><br><br>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Simulate progress bar loading
+    let progress = 0;
+    const progressBar = document.querySelector('.progress-bar');
+    const interval = setInterval(() => {
+        progress += 2; // Increase progress
+        if (progress >= 100) {
+            clearInterval(interval);
+            progress = 100;
+            // Hide the preloader and show the main content
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+        progressBar.style.width = progress + '%';
+    }, 100); // Update every 100 milliseconds
+});
+  </script>
 </body>
 </html>

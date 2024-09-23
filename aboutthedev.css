@@ -1265,3 +1265,73 @@ a {
 .smallhigh33:hover{
   color: var(--exposegreen);
 }
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2E2E2E; /* charcoalgrey background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.progress-bar-container {
+  width: 80%;
+  max-width: 600px;
+  height: 45px;
+  border: 4px dotted #2e2e2e; /* Dotted border */
+  border-radius: 5px;
+  overflow: hidden;
+  background: #FFDAB9; /* Light pink background */
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Retro shadow effect */
+}
+/* Adding vertical lines with increased gaps */
+.progress-bar-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 35px, /* Adjusted gap size */
+      #FFDAB9 35px,
+      #FFDAB9 37px /* Adjusted line width */
+  );
+  pointer-events: none; /* Make sure clicks pass through */
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: #002B36; /* Hot pink */
+  transition: width 1s ease-in-out;
+}
+
+p {
+  font-size: 18px;
+  color: white; /* Hot pink text */
+  text-shadow: 0 0 5px #ff69b4; /* Retro glow effect */
+}
+
+/* Hide content until loaded */
+#main-content {
+  display: none;
+}
+.smallhighend {
+  color: var(--exposegreen);
+  text-shadow: 0 0 1px var(--mintgreen);
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 100%;
+  letter-spacing: 4px;
+}
