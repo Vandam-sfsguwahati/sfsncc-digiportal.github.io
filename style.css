@@ -391,7 +391,7 @@ main {
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .dropdown-button {
@@ -584,4 +584,44 @@ main {
     margin-right: 38px;
     margin-left: 38px;
     margin-bottom: 6rem;
+}
+.float2 {
+    position: fixed; /* Fixed positioning to keep it in the same place on scroll */
+    top: 7rem; /* 4rem distance from the top */
+    left: 1rem; /* Adjust this value for horizontal spacing */
+    background-color: #ffffff; /* Button background color */
+    color: white; /* Icon and text color */
+    border-radius: 50%; /* Rounded button */
+    padding: 1rem; /* Space around the icon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    text-align: center; /* Center the icon */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 1.5rem;
+}
+
+.float2:hover {
+    background-color: #ffffff; /* Darker background on hover */
+    transform: scale(1.1);
+}
+
+.floattext2 {
+    display: none; /* Hide text by default; show on hover if needed */
+}
+.tooltip {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to the button */
+    top: 50%; /* Center vertically */
+    left: 100%; /* Position to the right of the button */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color of the tooltip */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Padding around text */
+    border-radius: 4px; /* Rounded corners */
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 10; /* Ensure it appears above other elements */
+    font-family: 'monospace';
+}
+
+.float2:hover .tooltip {
+    display: block; /* Show tooltip on hover */
 }
